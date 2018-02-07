@@ -2,8 +2,8 @@ package com.teamtreehouse.techdegree.hardware;
 
 import com.example.accessory.Horn;
 import com.example.accessory.Strobe;
+import com.teamtreehouse.techdegree.adapter.CameraToAccessoryAdapter;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
@@ -25,7 +25,7 @@ public class FrightMachineTest {
         machine = new FrightMachine();
         machine.addAccessory(new Horn());
         machine.addAccessory(new Strobe());
-        machine.addAccessory(new AccessoryAdapter(new Camera()));
+        machine.addAccessory(new CameraToAccessoryAdapter(new Camera()));
     }
 
     @Test
